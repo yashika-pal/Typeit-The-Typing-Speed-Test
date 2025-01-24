@@ -1,6 +1,5 @@
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* max-width: 800px; */
     margin: 0 auto;
     padding: 20px;
     background-color: #e6e6ff;
@@ -53,9 +52,9 @@ body {
     border: 2px solid #643296;
 }
 .generate:hover, .submit:hover, .restart:hover, .play:hover {
-    background-color: white; /* Change background to white */
-    color: #c8b4ff; /* Ensure text color remains visible */
-    cursor: pointer; /* Add pointer cursor on hover */
+    background-color: white;
+    color: #c8b4ff; 
+    cursor: pointer; 
 }
 #leaderboard,#back{
     width: 200px;
@@ -68,9 +67,9 @@ body {
     border: 2px solid #643296;
 }
 #leaderboard,#back:hover{
-    background-color: white; /* Change background to white */
-    color: #c8b4ff; /* Ensure text color remains visible */
-    cursor: pointer; /* Add pointer cursor on hover */
+    background-color: white; 
+    color: #c8b4ff;
+    cursor: pointer;
 }
 
 .stopnreset{
@@ -98,7 +97,7 @@ body {
     background-color: #f4ebff;
     border-radius: 2rem;
     border: 1px solid #c8b4ff;
-    color: black;
+    color: #643296;
 }
 
 .instructions{
