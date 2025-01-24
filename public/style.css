@@ -1,0 +1,157 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e6e6ff;
+    color: #643296;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    display: flex;
+    margin-bottom: 20px;
+    color: #643296;
+    justify-content: space-between;
+}
+
+.title{
+    font-weight:bolder;
+    color: #643296;
+    font-size: 2.7rem;
+}
+.maindiv{
+    padding-left: 5rem;
+}
+.maindiv2{
+    padding-right: 8rem;
+    padding-top: 4rem;
+}
+.text-to-type, .userInput {
+    background-color: #f4ebff;
+    border: 2.5px solid #643296;
+    height: 200px;
+    width: 700px;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: #643296; 
+    font-size: 1.8rem;
+    box-shadow: 5px 10px 15px -5px rgba(100, 50, 150, 0.4);
+}
+.generate, .submit, .restart, .play {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto 20px;
+    background-color:#c8b4ff;
+    font-size: 1.4rem; 
+    font-weight: bolder;
+    border-radius: 2rem;
+    color: #643296;
+    border: 2px solid #643296;
+}
+.generate:hover, .submit:hover, .restart:hover, .play:hover {
+    background-color: white; /* Change background to white */
+    color: #c8b4ff; /* Ensure text color remains visible */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+#leaderboard,#back{
+    width: 200px;
+    height: 50px;
+    font-size: 1.4rem; 
+    border-radius: 2rem;
+    background-color:#c8b4ff;
+    color: #643296;
+    font-weight: bold;
+    border: 2px solid #643296;
+}
+#leaderboard,#back:hover{
+    background-color: white; /* Change background to white */
+    color: #c8b4ff; /* Ensure text color remains visible */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.stopnreset{
+    display: flex;
+    justify-content: space-between;
+}
+#result {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4ebff;
+    border-radius: 2rem;
+    width: 28rem;
+    height:15rem;
+    border: 1px solid #c8b4ff;
+}
+
+.display {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4ebff;
+    border-radius: 2rem;
+    border: 1px solid #c8b4ff;
+    color: black;
+}
+
+.instructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card{
+    background-color: #c8b4ff;
+    color: #643296;
+    width: 50rem;
+    height: 16rem;
+    border-radius: 1.5rem;
+    box-shadow: 5px 10px 15px -5px rgba(0, 0, 0, 0.6);
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow: 5px 10px 15px -5px rgba(0, 0, 0, 0.9);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: #e6e6ff;
+    height: 55px;
+    text-align: center;
+    padding-top: 0.7rem;
+    border-radius: 1.5rem;
+}
+
+.card-text, ul{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: left;
+    list-style-type: disc;
+    padding-top: -2rem;
+}
+.list li::marker{
+    font-size: 1.8rem;
+}
+
+.heading1,.heading2{
+    font-weight:bolder;
+    color: #643296;
+    text-align: center;
+    font-size: 2.3rem;
+}
