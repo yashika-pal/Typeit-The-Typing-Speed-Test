@@ -149,13 +149,13 @@ submit.addEventListener('click',() =>{
         inputvar++;
         uservar++;
     }
-    let totalChars = inputText.length;
+    let totalChars = randomText.textContent.length;
     let Accuracy = ((totalChars-wrong) / totalChars) * 100;
     let percentageDisplay = document.createElement('div');
     let wpmbox = document.createElement('wpmbox');
 
     let timeInMin = timeInMsec/(1000*60);
-    const words = userText.length / 5;
+    const words = userInput.value.length / 5;
     const wpm = Math.round(words / timeInMin);
 
     percentageDisplay.textContent = `Accuracy: ${Accuracy.toFixed(2)}%`;
