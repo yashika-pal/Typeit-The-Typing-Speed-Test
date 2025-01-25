@@ -7,12 +7,13 @@ const cors = require('cors');
 app.use(cors());
 const API_KEY = process.env.API_KEY;
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+//key from .env file
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
 app.get('/generate', async(req, res) => {
-    const prompt = "Generate a random sentences having approx 15 words and each word having 5 characters.";
+    const prompt = "Generate a random sentence having approx 15 words and each word having 5 characters.";
     async function generateContent() {
         try {
             const result = await model.generateContent(prompt);
