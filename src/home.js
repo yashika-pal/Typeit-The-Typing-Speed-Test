@@ -80,27 +80,74 @@ const submit = document.querySelector('.submit');
 const result = document.getElementById('result');
 
 submit.addEventListener('click',() =>{
-    const inputText = randomText.textContent.trim().replaceAll('  ',' ').split('');
-    const userText = userInput.value.trim().replaceAll('  ',' ').split('');
+    let inputText = randomText.textContent;
+    let userText = userInput.value;
+    inputText = inputText.trim().split(' ');
+    userText = userText.trim().split(' ');
     result.innerHTML='';
     let wrong = 0;
-    const maxLength = Math.max(userText.length,inputText.length);
-    for(let i=0;i<maxLength;i++){
-        let expectedChar = inputText[i] || ' ';
-        let typedChar = userText[i] || ' ';
-        let span = document.createElement('span');
-        if (typedChar === expectedChar) {
-            span.textContent = typedChar;
-            span.style.color = 'green';
-            span.style.fontSize = '1.8rem';
-        } 
-        else {
-            span.textContent = typedChar || ' ';
-            span.style.color = 'red';
-            span.style.fontSize = '1.8rem';
-            wrong++;
+    let inputvar=0;
+    let uservar=0;
+    while(inputvar<inputText.length && uservar<userText.length){
+        let inputWord = inputText[inputvar];
+        let userWord = userText[uservar];
+        let i=0;
+        let j=0;
+        //let maxWordLength = Math.max(inputWord.length,userWord.length);
+        while(i<inputWord.length || j<userWord.length){
+            let charSpan = document.createElement('span');
+            if(inputWord.length===userWord.length){
+                if(inputWord[i]===userWord[j]){
+                    charSpan.textContent= userWord[j];
+                    charSpan.style.color = 'green';
+                    charSpan.style.fontSize = '1.8rem';
+                }
+                else{
+                    charSpan.textContent = userWord[j];
+                    charSpan.style.color = 'red';
+                    charSpan.style.fontSize = '1.8rem';
+                    wrong++;
+                }
+                i++;
+                j++;
+            }
+            else if(inputWord.length>userWord.length){
+                if(inputWord[i]===userWord[j]){
+                    charSpan.textContent = userWord[j];
+                    charSpan.style.color = 'green';
+                    charSpan.style.fontSize = '1.8rem';
+                    i++;
+                    j++;
+                }
+                else{
+                    charSpan.textContent = inputWord[i] || '';
+                    charSpan.style.color = 'red';
+                    charSpan.style.fontSize = '1.8rem';
+                    wrong++;
+                    i++;
+                }
+            }
+            else if(inputWord.length<userWord.length){
+                if(inputWord[i]===userWord[j]){
+                    charSpan.textContent = userWord[j];
+                    charSpan.style.color = 'green';
+                    charSpan.style.fontSize = '1.8rem';
+                    i++;
+                    j++;
+                }
+                else{
+                    charSpan.textContent = userWord[j] || '';
+                    charSpan.style.color = 'red';
+                    charSpan.style.fontSize = '1.8rem';
+                    wrong++;
+                    j++;
+                }
+            }
+            result.appendChild(charSpan);
         }
-        result.appendChild(span);
+        result.appendChild(document.createTextNode(' '));
+        inputvar++;
+        uservar++;
     }
     let totalChars = inputText.length;
     let Accuracy = ((totalChars-wrong) / totalChars) * 100;
